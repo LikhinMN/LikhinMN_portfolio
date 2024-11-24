@@ -10,7 +10,6 @@
 <body>
     <nav id="desktop-nav">
         <div class="logo">Likhin M N</div>
-        <img src="light.png" alt="modes" id="modes">
         <div>
             <ul class="nav-links">
                 <li><a href="#about">about</a></li>
@@ -18,12 +17,19 @@
                 <li><a href="#projects">projects</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul> 
+            <button id="theme-switch">
+                <img src="dark_mode_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png" alt="dark mode" class="modes"style="var(--icon-color: invert(0%);)">
+                <img src="light_mode_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png" alt="light mode" class="modes">
+                </button>
         </div>
     </nav>
     <nav id="hamburger-nav">
         <div class="logo">Likhin M N</div>
-        <img src="light.png" alt="modes" class="thememode">
         <div class="hamburger-menu">
+            <button id="theme-switch">
+                <img src="dark_mode_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png" alt="dark mode" class="modes">
+                <img src="light_mode_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png" alt="light mode" class="modes">
+            </button>
             <div class="hamburger-icon" onclick="togglemenu()">
                  <span></span>
                  <span></span>
@@ -34,7 +40,6 @@
                 <li><a href="#education" onclick="togglemenu()">education</a></li>
                 <li><a href="#projects" onclick="togglemenu()">projects</a></li>
                 <li><a href="#contact" onclick="togglemenu()">contact</a></li>
-
             </div>
         </div>
     </nav>
@@ -175,6 +180,6 @@
         </nav>
         <p>copyright &#169; 2024 Likhin M N. All rights reserved.</p>
        </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

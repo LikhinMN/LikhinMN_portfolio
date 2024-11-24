@@ -16,6 +16,11 @@ a,.btn{
 /*desktop*/
 #desktop-nav{
     display: flex;
+    justify-items: baseline;
+}
+#desktop-nav div{
+    display: flex;
+    gap: 2rem;
 }
 nav,
 .nav-links{
@@ -29,8 +34,9 @@ height: 17vh;
 .nav-links{
 gap: 2rem;
 list-style: none;
-font-size: 1.5rem; margin-left:0;
-justify-content: center;
+font-size: 1.5rem; 
+margin-left:0;
+justify-content:center;
 }
 a{
     color: var(--text-color);
@@ -49,28 +55,43 @@ a:hover{
 }
 
 /*mode*/
-#thememode, #modes{
+#theme-switch {
+    height: 30px;
     width: 30px;
+    padding: 0;
+    background-color: var(--primary-color);
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch img {
+    height: 30px;
     cursor: pointer;
 }
-.icon{
-    cursor: pointer;
-    height: 2rem;
-    filter: var(--icon-color);
+
+#theme-switch img:last-child {
+    display: none;
 }
-.social-icon{
-    height: 2rem;
-    cursor: pointer;
-    filter: var(--icon-color);
+
+body.dark-mode #theme-switch img:first-child {
+    display: none;
 }
-:root{
+
+body.dark-mode #theme-switch img:last-child {
+    display: inline;
+}
+
+:root {
     --primary-color: white;
     --secondary-color: black;
     --text-color: black;
     --text-hover-color: gray;
     --icon-color: invert(0%);
 }
-body.dark-theme {
+
+body.dark-mode {
     --primary-color: black;
     --secondary-color: white;
     --text-color: white;
@@ -78,6 +99,17 @@ body.dark-theme {
     --icon-color: invert(100%);
 }
 
+
+.social-icon{
+    height: 2rem;
+    cursor: pointer;
+    filter: var(--icon-color);
+}
+.icon{
+    cursor: pointer;
+    height: 2rem;
+    filter: var(--icon-color);
+}
 .section-text p,
 h1,
 .details-container p,
@@ -99,6 +131,9 @@ footer p,
 .hamburger-menu {
     position: relative;
     display: inline-block;
+    display: flex;
+    gap: 2rem;
+    justify-content: left;
 }
 
 .hamburger-icon{
@@ -265,21 +300,20 @@ color: var(--primary-color);
 .details-container {
     padding: 1.5rem;
     flex: 1;
-    background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(255, 255, 255, 0.1)); /* Gradient background */
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(255, 255, 255, 0.1)); 
     border-radius: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Transparent border for glass effect */
-    backdrop-filter: blur(10px); /* Background blur for glass effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     text-align: center;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    transition: all 0.3s ease;
 }
 
 .details-container:hover {
-    border-color: rgba(255, 165, 0, 0.8); /* Orange border on hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 165, 0, 0.8); /* Glowing orange shadow */
-    background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 255, 255, 0.2)); /* Slightly more opaque gradient background on hover */
+    border-color: rgba(255, 165, 0, 0.8); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 165, 0, 0.8); 
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 255, 255, 0.2));
 }
-
 .section-container{
     gap: 4rem;
     height: 80%;
@@ -340,7 +374,19 @@ color: var(--primary-color);
     margin: 2rem auto;
     padding: 0.5rem;
 }
-.contact-info-upper-container { display: flex; justify-content: center; border-radius: 2rem; border: 1px solid rgba(255, 255, 255, 0.2); /* Transparent border for glass effect */ background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(255, 255, 255, 0.1)); /* Gradient background */ backdrop-filter: blur(10px); /* Background blur for glass effect */ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */ margin: 2rem auto; padding: 0.5rem; transition: all 0.3s ease; /* Smooth transition for hover effects */ } .contact-info-upper-container:hover { border-color: rgba(255, 165, 0, 0.8); /* Orange border on hover */ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 165, 0, 0.8); /* Glowing orange shadow */ background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 255, 255, 0.2)); /* Slightly more opaque gradient background on hover */ }
+.contact-info-upper-container { display: flex; 
+    justify-content: center;
+     border-radius: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.2); 
+      background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(255, 255, 255, 0.1)); 
+     backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+       margin: 2rem auto; padding: 0.5rem; transition: all 0.3s ease; 
+       } 
+       .contact-info-upper-container:hover { border-color: rgba(255, 165, 0, 0.8); 
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 165, 0, 0.8);
+           background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 255, 255, 0.2));
+            }
 .contact-info-container{
     display: flex;
     align-items: center;
