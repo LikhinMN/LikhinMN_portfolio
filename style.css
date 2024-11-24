@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:"Poppins",sans-serif;
+    background-color:var(--primary-color);
+}
+html{
+    scroll-behavior: smooth;
+}
+a,.btn{
+    transition: all 300ms ease;
+}
+/*desktop*/
+#desktop-nav{
+    display: flex;
+}
+nav,
+.nav-links{
+display: flex;
+}
+nav{
+    justify-content: space-around;
+    align-items: center;
+height: 17vh;
+}
+.nav-links{
+gap: 2rem;
+list-style: none;
+font-size: 1.5rem; margin-left:0;
+justify-content: center;
+}
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--text-hover-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.logo{
+    font-size: 2rem;
+    cursor: default;
+    color: var(--text-color);
+}
+/*hover*/
+
+/*mode*/
+#thememode, #modes{
+    width: 30px;
+    cursor: pointer;
+}
+.icon{
+    cursor: pointer;
+    height: 2rem;
+    filter: var(--icon-color);
+}
+.social-icon{
+    height: 2rem;
+    cursor: pointer;
+    filter: var(--icon-color);
+}
+:root{
+    --primary-color: white;
+    --secondary-color: black;
+    --text-color: black;
+    --text-hover-color: gray;
+    --icon-color: invert(0%);
+}
+body.dark-theme {
+    --primary-color: black;
+    --secondary-color: white;
+    --text-color: white;
+    --text-hover-color: lightgray;
+    --icon-color: invert(100%);
+}
+
+.section-text p,
+h1,
+.details-container p,
+.details-container small,
+.details-container h2,
+.details-container h3,
+.text-container,
+.nav-links-container a,
+footer p,
+.contact-info-container a,
+.contact-info-container p{
+    color: var(--text-color);
+}
+
+/*mobile view*/
+#hamburger-nav{
+    display: none;
+}
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3 ease-in-out;
+}
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links li{
+    list-style: none;
+}
+.menu-links.open{
+    max-height: 300px;
+}
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px,5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+/*section*/
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+.section-container{
+ display: flex;
+}
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+.section_pic-container{
+    display: flex;
+    clip-path: circle(50% at 50% 50%);
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+.section-text{
+    align-self: center;
+    text-align: center;
+}
+.section_text p{
+    font-weight: 600;
+}
+.section_text_p{
+    text-align: center;
+}
+.section_text_p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+#social-container{
+    display: flex;
+    justify-content: center;
+    size-adjust: 80px;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/*button*/
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    width: 8rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    border-style: solid;
+    color: var(--text-color);
+}
+.btn-color-1{
+border-color: var(--secondary-color);
+background-color: var(--primary-color);
+}
+.btn-color-1:hover{
+cursor: pointer;
+background-color: var(--secondary-color);
+color: var(--primary-color);
+}
+/*about*/
+#about{
+    position: relative;
+}
+.about-containers{
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.about-detail-container{
+    justify-content: center;
+    flex-direction: column;
+}
+.about-containers,.about-detail-container{
+    display: flex;
+}
+.arrow{
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+    width: 30px;
+    cursor: pointer;
+}
+.details-container{
+    padding: 1.5rem;
+    flex: 1;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    border: var(--secondary-color) 0.1rem solid;
+    text-align: center;
+}
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(255, 255, 255, 0.1)); /* Gradient background */
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Transparent border for glass effect */
+    backdrop-filter: blur(10px); /* Background blur for glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.details-container:hover {
+    border-color: rgba(255, 165, 0, 0.8); /* Orange border on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 165, 0, 0.8); /* Glowing orange shadow */
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 255, 255, 0.2)); /* Slightly more opaque gradient background on hover */
+}
+
+.section-container{
+    gap: 4rem;
+    height: 80%;
+}
+.section_pic-containers{
+    width: 45%;
+    height: 805;
+    position: absolute;
+    bottom: 0;
+   left: 100px;
+}
+/*education*/
+#education{
+    position: relative;
+}
+.education-container{
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.eduction-details-container{
+    justify-content: center;
+    flex-direction: column;
+}
+.education-container,.eduction-details-container{
+    display: flex;
+}
+/*project*/
+#projects{
+    position: relative;
+}
+.project-container{
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.project-details-container{
+    justify-content: center;
+    flex-direction: column;
+}
+.project-container,.project-details-container{
+    display: flex;
+}
+/*contact*/
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+.contact-info-upper-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: var(--secondary-color) 0.1rem solid;
+    border-color: var(--secondary-color);
+    background: var(--primary-color);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+.contact-info-upper-container { display: flex; justify-content: center; border-radius: 2rem; border: 1px solid rgba(255, 255, 255, 0.2); /* Transparent border for glass effect */ background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(255, 255, 255, 0.1)); /* Gradient background */ backdrop-filter: blur(10px); /* Background blur for glass effect */ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */ margin: 2rem auto; padding: 0.5rem; transition: all 0.3s ease; /* Smooth transition for hover effects */ } .contact-info-upper-container:hover { border-color: rgba(255, 165, 0, 0.8); /* Orange border on hover */ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 165, 0, 0.8); /* Glowing orange shadow */ background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 255, 255, 0.2)); /* Slightly more opaque gradient background on hover */ }
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+.contact-info-container p{
+    font-size: larger;
+}
+.contact-icon{
+    cursor: default;
+    filter: var(--icon-color);
+}
+.email-icon{
+    height: 2.5rem;
+}
+/*footer*/
+footer{
+    height: 26vh;
+    margin: 0.1rem;
+}
+footer p{
+    text-align: center;
+}
