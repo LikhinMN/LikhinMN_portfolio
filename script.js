@@ -11,11 +11,11 @@ var thememode = document.getElementById("thememode");
 function toggleTheme() {
     document.body.classList.toggle("dark-theme");
     if (document.body.classList.contains("dark-theme")) {
-        modes.src = "../assets/pngwing.com(2).png";
-        thememode.src = "../assets/pngwing.com(2).png";
+        modes.src = "moon1.png";
+        thememode.src = "moon1.png";
     } else {
-        modes.src = "../assets/pngwing.com.png";
-        thememode.src = "../assets/pngwing.com.png";
+        modes.src = "light.png";
+        thememode.src = "light.png.png";
     }
 }
 
