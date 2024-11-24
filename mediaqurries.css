@@ -29,7 +29,13 @@
     }
     .eduction-details-container,.education-container{
         flex-wrap: wrap;
-        column-gap: 500px;
+        column-gap: 1400px;
+    }
+    .project-details-container,.project-container{
+        flex-wrap: flex;
+        width: fit-content;
+        align-items: center;
+        padding-bottom: 25px;
     }
     .arrow {
         display: none;
@@ -58,7 +64,7 @@
         height: 40vh;
     }
     #hamburger-nav{
-        height: 190px;
+        height: 120px;
     }
     .menu-links{
         z-index: 1;
@@ -98,8 +104,8 @@
     }
     .section_pic-container {
         width: auto;
-       height: 300px;
-       width: 300px;
+       height: 230px;
+       width: 230px;
         justify-content: center;
         z-index: -1;
     }
