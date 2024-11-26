@@ -47,12 +47,18 @@ a:hover{
     text-decoration: underline;
     text-underline-offset: 4px;
 }
-
-.logo{
+.logo {
+    display: flex;
+    align-items: center;
     font-size: 2rem;
-    cursor: default;
     color: var(--text-color);
 }
+
+.logo-img {
+    height: 40px;
+    margin-right:0; 
+}
+
 
 /*mode*/
 #theme-switch {
